@@ -4,6 +4,8 @@ import App from './App.jsx';
 import './index.css';
 import { UserProvider } from './context/user_context.jsx';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { ProductsProvider } from './context/products_context.jsx';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Auth0Provider
@@ -14,7 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     }}
   >
     <UserProvider>
-      <App />
+      <ProductsProvider>
+        <App />
+      </ProductsProvider>
     </UserProvider>
   </Auth0Provider>
 );
