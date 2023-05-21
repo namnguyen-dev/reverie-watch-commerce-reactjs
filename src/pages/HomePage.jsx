@@ -1,11 +1,12 @@
 import React from 'react';
-import { FeaturedProducts, Hero } from '../components';
+import { FeaturedProducts, Hero, Promo } from '../components';
 
 export default function HomePage() {
   return (
     <>
       <Hero />
       <FeaturedProducts />
+      <Promo />
     </>
   );
 }
