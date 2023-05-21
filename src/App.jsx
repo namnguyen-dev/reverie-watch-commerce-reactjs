@@ -1,8 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages';
+
 function App() {
   return (
-    <>
-      <h1 className="bg-red-900">Hi</h1>
-    </>
+    <div className="relative min-h-screen">
+      <Router>
+        <main className="min-h-screen">
+          <Routes>
+            <Route exact path="/" element={<HomePage />}></Route>
+          </Routes>
+        </main>
+      </Router>
+    </div>
   );
 }
 
