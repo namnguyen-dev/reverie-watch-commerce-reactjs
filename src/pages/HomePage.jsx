@@ -1,5 +1,5 @@
 import React from 'react';
-import { FeaturedProducts, Hero, Promo } from '../components';
+import { FeaturedProducts, Hero, NewProducts, Promo } from '../components';
 
 export default function HomePage() {
   return (
@@ -7,6 +7,7 @@ export default function HomePage() {
       <Hero />
       <FeaturedProducts />
       <Promo />
+      <NewProducts />
     </>
   );
 }
