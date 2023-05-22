@@ -15,6 +15,7 @@ import CartTotals from './CartTotals';
 import CartBtn from './CartBtn';
 import CartContent from './CartContent';
 import Btn from './Btn';
+import StripeCheckout from './StripeCheckout';
 export {
   NavBar,
   Footer,
@@ -33,4 +34,5 @@ export {
   CartContent,
   CartItem,
   Btn,
+  StripeCheckout,
 };
