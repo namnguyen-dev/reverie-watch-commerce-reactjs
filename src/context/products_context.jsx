@@ -6,6 +6,9 @@ import {
   GET_PRODUCTS_BEGIN,
   GET_PRODUCTS_SUCCESS,
   GET_PRODUCTS_ERROR,
+  GET_SINGLE_PRODUCT_BEGIN,
+  GET_SINGLE_PRODUCT_SUCCESS,
+  GET_SINGLE_PRODUCT_ERROR,
 } from './actions';
 import reducer from '../reducers/products_reducer';
 import { products_url as url } from '../utils/constants';
@@ -14,7 +17,12 @@ const initialState = {
   isMenuOpen: false,
   products_loading: false,
   products_error: false,
+  products: [],
   featured_products: [],
+  new_products: [],
+  single_product_loading: false,
+  single_product_error: false,
+  single_product: {},
 };
 
 const ProductsContext = React.createContext();
@@ -44,6 +52,19 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
+  const fetchSingleProduct = async url => {
+    dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
+    try {
+      const response = await axios(url);
+      console.log(url);
+      const singleProduct = response.data;
+      console.log(singleProduct);
+      dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct });
+    } catch (error) {
+      dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
+    }
+  };
+
   useEffect(() => {
     fetchProducts(`${url}`);
   }, []);
@@ -54,6 +75,7 @@ export const ProductsProvider = ({ children }) => {
         ...state,
         openMenu,
         closeMenu,
+        fetchSingleProduct,
       }}
     >
       {children}

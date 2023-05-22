@@ -5,7 +5,7 @@ import './index.css';
 import { UserProvider } from './context/user_context.jsx';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { ProductsProvider } from './context/products_context.jsx';
-
+import { CartProvider } from './context/cart_context.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Auth0Provider
@@ -17,7 +17,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   >
     <UserProvider>
       <ProductsProvider>
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
       </ProductsProvider>
     </UserProvider>
   </Auth0Provider>

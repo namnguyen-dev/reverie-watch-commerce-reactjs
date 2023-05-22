@@ -1,3 +1,3 @@
 import HomePage from './HomePage';
-
-export { HomePage };
+import SingleProductPage from './SingleProductPage';
+export { HomePage, SingleProductPage };

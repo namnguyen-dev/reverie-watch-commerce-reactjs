@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { useUserContext } from '../context/user_context';
 import { useProductsContext } from '../context/products_context';
+import { useCartContext } from '../context/cart_context';
 import CartBtn from './CartBtn';
 
 export default function NavBar() {
   const { isMenuOpen, openMenu, closeMenu } = useProductsContext();
+  const { clearCart } = useCartContext();
   const { loginWithRedirect, myUser, logout } = useUserContext();
-  const clearCart = () => {
-    console.log('clear cart');
-  };
+
   return (
     <div>
       <div className="section-center py-5">
