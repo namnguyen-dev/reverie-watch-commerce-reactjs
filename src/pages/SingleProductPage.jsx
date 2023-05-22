@@ -20,7 +20,6 @@ const SingleProductPage = () => {
     single_product: product,
     fetchSingleProduct,
   } = useProductsContext();
-  console.log(error);
 
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
@@ -41,7 +40,6 @@ const SingleProductPage = () => {
   if (error) {
     return <Error />;
   }
-  console.log(product);
   const { name, company, image, description, stock, stars } = product;
   return (
     <>

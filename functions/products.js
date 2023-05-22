@@ -43,7 +43,6 @@ export async function handler() {
       body: JSON.stringify(products),
     };
   } catch (error) {
-    console.log(error);
     return {
       statusCode: 500,
       body: 'There was an error',

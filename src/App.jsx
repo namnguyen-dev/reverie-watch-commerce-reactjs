@@ -6,6 +6,7 @@ import {
   ErrorPage,
   PrivateRoute,
   CheckoutPage,
+  ProductsPage,
 } from './pages';
 import { Footer, NavBar } from './components';
 
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<HomePage />}></Route>
             <Route exact path="/cart" element={<CartPage />}></Route>
+            <Route exact path="/products" element={<ProductsPage />}></Route>
             <Route
               exact
               path="/products/:id"

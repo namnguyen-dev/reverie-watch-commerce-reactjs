@@ -7,7 +7,7 @@ import {
   GET_SINGLE_PRODUCT_BEGIN,
   GET_SINGLE_PRODUCT_SUCCESS,
   GET_SINGLE_PRODUCT_ERROR,
-} from '../context/actions';
+} from '../actions';
 import paginator from '../utils/paginator';
 
 const products_reducer = (state, action) => {

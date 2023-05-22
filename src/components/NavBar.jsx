@@ -95,7 +95,6 @@ export default function NavBar() {
                 <button
                   type="button"
                   onClick={() => {
-                    console.log(window.location.origin);
                     clearCart();
                     localStorage.removeItem('user');
                     logout({

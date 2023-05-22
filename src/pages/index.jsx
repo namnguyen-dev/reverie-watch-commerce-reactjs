@@ -4,4 +4,13 @@ import CartPage from './CartPage';
 import ErrorPage from './ErrorPage';
 import PrivateRoute from './PrivateRoute';
 import CheckoutPage from './CheckoutPage';
-export { HomePage, SingleProductPage, CartPage, ErrorPage, PrivateRoute , CheckoutPage};
+import ProductsPage from './ProductsPage';
+export {
+  HomePage,
+  SingleProductPage,
+  CartPage,
+  ErrorPage,
+  PrivateRoute,
+  CheckoutPage,
+  ProductsPage,
+};
